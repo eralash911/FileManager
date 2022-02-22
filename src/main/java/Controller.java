@@ -48,6 +48,7 @@ public class Controller {
             distPC = leftPC;
         }
 
+
         Path srcPath = Paths.get(srcPC.getCurrentPath(), srcPC.getSelectedFileName());
         Path distPath = Paths.get(distPC.getCurrentPath()).resolve(srcPath.getFileName().toString());
         try {
