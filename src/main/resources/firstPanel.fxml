@@ -21,13 +21,13 @@
 
 
     <HBox>
-        <fx:include source="main.fxml"/>
-        <fx:include source="main.fxml"/>
+        <fx:include fx:id="leftPanel" source="main.fxml"/>
+        <fx:include fx:id="rightPanel" source="main.fxml"/>
     </HBox>
 
     <HBox spacing="5">
-        <Button text="Copy" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#btnCopy"/>
-        <Button text="Move" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
-        <Button text="Exit" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#btnExit"/>
+        <Button text="Copy" HBox.hgrow="ALWAYS" focusTraversable="false" maxWidth="Infinity" onAction="#btnCopy"/>
+        <Button text="Move" HBox.hgrow="ALWAYS" focusTraversable="false" maxWidth="Infinity"/>
+        <Button text="Exit" HBox.hgrow="ALWAYS" focusTraversable="false" maxWidth="Infinity" onAction="#btnExit"/>
     </HBox>
 </VBox>
