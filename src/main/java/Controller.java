@@ -31,7 +31,7 @@ public class Controller {
         PanelControl rightPC = (PanelControl) rightPanel.getProperties().get("ctrl");
 
         if(leftPC.getSelectedFileName() == null && rightPC.getSelectedFileName() == null){
-            Alert alert = new Alert(Alert.AlertType.ERROR, "File has been no choose", ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.ERROR, "File has been no choose ", ButtonType.OK);
             alert.showAndWait();
             return;
         }
@@ -47,6 +47,7 @@ public class Controller {
             srcPC = rightPC;
             distPC = leftPC;
         }
+
 
         Path srcPath = Paths.get(srcPC.getCurrentPath(), srcPC.getSelectedFileName());
         Path distPath = Paths.get(distPC.getCurrentPath()).resolve(srcPath.getFileName().toString());
